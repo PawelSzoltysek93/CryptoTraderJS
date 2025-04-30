@@ -29,6 +29,5 @@ const startApp = async () => {
   } else if (menu === "Exit") {
     return;
   }
-  console.log(chalk.red(`You chose ${menu}.`));
 };
 startApp();
