@@ -1,0 +1,14 @@
+[
+  {
+    "coin": "ethereum",
+    "amount": 10,
+    "buyPrice": 1827.09,
+    "time": "5.5.2025, 11:26:28"
+  },
+  {
+    "coin": "bitcoin",
+    "amount": 2,
+    "buyPrice": 94609,
+    "time": "5.5.2025, 11:37:15"
+  }
+]
