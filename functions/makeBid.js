@@ -3,7 +3,6 @@ import path from "path";
 import axios from "axios";
 import chalk from "chalk";
 import inquirer from "inquirer";
-import { time } from "console";
 
 export const makeBid = async () => {
   const coins = ["bitcoin", "ethereum", "solana", "near"];

@@ -3,6 +3,7 @@ import chalk from "chalk";
 import axios from "axios";
 import { priceTicker } from "./functions/priceTicker.js";
 import { makeBid } from "./functions/makeBid.js";
+import { showCurrentBids } from "./functions/showBids.js";
 
 const startApp = async () => {
   console.clear();
@@ -26,6 +27,8 @@ const startApp = async () => {
     await priceTicker();
   } else if (menu === "Make a bid") {
     await makeBid();
+  } else if (menu === "Show current bids") {
+    await showCurrentBids();
   } else if (menu === "Exit") {
     return;
   }
