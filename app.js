@@ -4,8 +4,9 @@ import axios from "axios";
 import { priceTicker } from "./functions/priceTicker.js";
 import { makeBid } from "./functions/makeBid.js";
 import { showCurrentBids } from "./functions/showBids.js";
+import { closeBid } from "./functions/closeBid.js";
 
-const startApp = async () => {
+export const startApp = async () => {
   console.clear();
   console.log(chalk.blue("Welcome to the CryptoTraderJS !"));
 
@@ -29,6 +30,8 @@ const startApp = async () => {
     await makeBid();
   } else if (menu === "Show current bids") {
     await showCurrentBids();
+  } else if (menu === "Close a bid") {
+    await closeBid();
   } else if (menu === "Exit") {
     return;
   }

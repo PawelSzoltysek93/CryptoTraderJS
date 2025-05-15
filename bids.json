@@ -10,5 +10,29 @@
     "amount": 2,
     "buyPrice": 94609,
     "time": "5.5.2025, 11:37:15"
+  },
+  {
+    "coin": "bitcoin",
+    "amount": 5,
+    "buyPrice": 102375,
+    "time": "2025-05-15T12:24:20.418Z"
+  },
+  {
+    "coin": "ripple",
+    "amount": 123,
+    "buyPrice": 2.48,
+    "time": "2025-05-15T12:38:38.133Z"
+  },
+  {
+    "coin": "litecoin",
+    "amount": 43,
+    "buyPrice": 98.43,
+    "time": "2025-05-15T12:39:55.052Z"
+  },
+  {
+    "coin": "ripple",
+    "amount": 324324,
+    "buyPrice": 2.48,
+    "time": "2025-05-15T13:00:42.773Z"
   }
 ]

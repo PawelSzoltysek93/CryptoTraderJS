@@ -3,9 +3,20 @@ import path from "path";
 import axios from "axios";
 import chalk from "chalk";
 import inquirer from "inquirer";
+import { goBackToMenu } from "./goBacktoMenu.js";
 
 export const makeBid = async () => {
-  const coins = ["bitcoin", "ethereum", "solana", "near"];
+  const coins = [
+    "bitcoin",
+    "ethereum",
+    "solana",
+    "near",
+    "ripple",
+    "litecoin",
+    new inquirer.Separator(),
+    "⬅️  Go back to main menu",
+  ];
+
   const { coin, amount } = await inquirer.prompt([
     {
       type: "list",
@@ -17,8 +28,13 @@ export const makeBid = async () => {
       type: "input",
       name: "amount",
       message: "Enter the amount you want to bid:",
+      when: (answers) => answers.coin !== "⬅️  Go back to main menu",
     },
   ]);
+
+  if (coin === "⬅️  Go back to main menu") {
+    return goBackToMenu();
+  }
   try {
     const res = await axios.get(
       `https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd`
@@ -31,9 +47,9 @@ export const makeBid = async () => {
       coin,
       amount: parseFloat(amount.replace(",", ".")),
       buyPrice: price,
-      time: new Date().toLocaleString(),
+      time: new Date().toISOString(),
     };
-    const filePath = path.join("bids.json");
+    const filePath = path.join("./bids.json");
     let bids = [];
     if (fs.existsSync(filePath)) {
       const data = fs.readFileSync(filePath, "utf-8");
@@ -50,4 +66,5 @@ export const makeBid = async () => {
   } catch (error) {
     console.error(chalk.red("Error placing bid: "), error.message);
   }
+  await goBackToMenu();
 };

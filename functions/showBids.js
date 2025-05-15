@@ -1,6 +1,9 @@
 import fs from "fs";
 import axios from "axios";
 import chalk from "chalk";
+import inquirer from "inquirer";
+import { startApp } from "../app.js";
+import { goBackToMenu } from "./goBacktoMenu.js";
 
 export const showCurrentBids = async () => {
   const filePath = "./bids.json";
@@ -50,7 +53,7 @@ export const showCurrentBids = async () => {
           } | Buy: $${bid.buyPrice.toFixed(2)} | Now: $${currentPrice.toFixed(
             2
           )} | Profit/Loss: ${colorFn(profitLossValue)} | Opened: ${new Date(
-            bid.openedAt
+            bid.time
           ).toLocaleString()}`
         );
       }
@@ -58,4 +61,5 @@ export const showCurrentBids = async () => {
   } catch (err) {
     console.error(chalk.red("Error fetching current prices:", err.message));
   }
+  await goBackToMenu();
 };
