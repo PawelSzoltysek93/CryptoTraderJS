@@ -22,3 +22,5 @@ Plan for CryptoTraderJS:
 10.userProfile builder ????
 
 11.Exit ✓
+
+12. Landing page  2 hours ✓
