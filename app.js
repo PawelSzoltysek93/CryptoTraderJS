@@ -1,12 +1,13 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 import figlet from "figlet";
-import { priceTicker } from "./main_functions/priceTicker.js";
-import { makeBid } from "./main_functions/makeBid.js";
-import { showCurrentBids } from "./main_functions/showBids.js";
-import { closeBid } from "./main_functions/closeBid.js";
+import { priceTicker } from "./main_functions/marketPrices.js";
+import { makeBid } from "./main_functions/placeOrder.js";
+import { showCurrentBids } from "./main_functions/activeOrders.js";
+import { closeBid } from "./main_functions/closeOrder.js";
+import { logIn } from "./landingPage.js";
 
-export const startApp = () => {
+export const startApp = async () => {
   console.clear();
 
   figlet.text(
@@ -27,7 +28,7 @@ export const startApp = () => {
 
       console.log(`
 ${chalk.green(
-  "═════════════════════════════════════════════════════════════════════"
+  "══════════════════════════════════════════════════════════════════════════════════"
 )}
 `);
       const { choice } = await inquirer.prompt([
@@ -88,4 +89,4 @@ ${chalk.green(
     }
   );
 };
-startApp();
+logIn();

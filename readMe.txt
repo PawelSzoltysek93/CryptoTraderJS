@@ -7,20 +7,22 @@ Plan for CryptoTraderJS:
 
 3.Api check  (Axios-> coingecko), 30 minutes ✓
 
-4.Building menu and functions, files 2 hours ✓
+4.Building menu and functions files 2 hours ✓
 
-5.makeBid function  (with date), 2,5 hours ✓
+5.openOrder function  (with date), 2,5 hours ✓
 
-6.showCurrentBids (loss / profit), 1 hour ✓
+6.activeOrders function (loss / profit), 1 hour ✓
 
-7.closeBid function, 1 hour ✓
+7.closeOrder function, 1 hour ✓
 
-8."go back to menu in every function" 2 hours ✓
+8."go back to menu" in every function 2 hours ✓
 
-9.Balance ?????
+9.userProfile builder, 3 hours ✓
 
-10.userProfile builder ????
+10.Exit ✓
 
-11.Exit ✓
+11. Landing page  2 hours ✓
 
-12. Landing page  2 hours ✓
+12. Balance ?????
+
+13. Sell Order ????

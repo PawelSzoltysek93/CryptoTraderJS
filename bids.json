@@ -34,5 +34,11 @@
     "amount": 43,
     "buyPrice": 98.05,
     "time": "2025-05-15T13:36:42.269Z"
+  },
+  {
+    "coin": "ethereum",
+    "amount": 5,
+    "buyPrice": 2411.58,
+    "time": "2025-05-19T09:48:34.635Z"
   }
 ]
